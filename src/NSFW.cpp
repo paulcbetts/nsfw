@@ -157,6 +157,7 @@ NAN_METHOD(NSFW::JSNew) {
   if (!info.IsConstructCall()) {
     v8::Local<v8::Function> cons = New<v8::Function>(constructor);
     info.GetReturnValue().Set(Nan::NewInstance(cons).ToLocalChecked());
+
     return;
   }
 
